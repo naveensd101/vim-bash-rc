@@ -1,6 +1,5 @@
 syntax on
 set autoindent
-set smartindent
 set rnu
 set number
 set mouse=a
@@ -12,16 +11,11 @@ set belloff=all
 set shiftwidth=4
 set splitright
 set path+=**
-set path+=/mnt/d/Me/Programming/CP/templates
+set path+=/home/n_sd/naveen/personal/cs/cp/templates
 
-" WSL yank support
-let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path according to your mount point
-if executable(s:clip)
-    augroup WSLYank
-        autocmd!
-        autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
-    augroup END
-endif
-
+"available stuff <F2><F3><F4><F5><F6><F7><F9><F12>
+nnoremap <F2> :!g++ % -Wall -Wextra -pedantic -std=c++17 -O2 -Wshadow -Wformat=2 -Wfloat-equal -Wconversion -Wlogical-op -Wshift-overflow=2 -Wduplicated-cond -Wcast-qual -Wcast-align -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -D_FORTIFY_SOURCE=2 -fsanitize=address -fsanitize=undefined -fno-sanitize-recover -fstack-protector <CR>
+nnoremap <F3> :!./a.out <CR>
+nnoremap <F4> :!g++ % -std=c++17 <CR>
 
 
