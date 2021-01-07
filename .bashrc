@@ -116,19 +116,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
-#cpp for cp
-alias setcpp="touch input.txt soln.cpp && cp '/mnt/d/Me/Programming/CP/templates/basic.cpp' soln.cpp && code .&&code soln.cpp input.txt"
-alias go="g++ soln.cpp -std=c++17 && time ./a.out<input.txt"
+alias pathcp="cd ~/naveen/personal/cs/cp/"
+alias setcp="touch soln.cpp && cp ~/naveen/personal/cs/cp/templates/basic.cpp soln.cpp && vim soln.cpp"
+alias setcp2="touch soln.cpp && cp ~/naveen/personal/cs/cp/templates/basic2.cpp soln.cpp && vim soln.cpp"
+alias fm="g++ soln.cpp -std=c++17"
 alias m="g++ soln.cpp -Wall -Wextra -pedantic -std=c++17 -O2 -Wshadow -Wformat=2 -Wfloat-equal -Wconversion -Wlogical-op -Wshift-overflow=2 -Wduplicated-cond -Wcast-qual -Wcast-align -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -D_FORTIFY_SOURCE=2 -fsanitize=address -fsanitize=undefined -fno-sanitize-recover -fstack-protector"
-alias r="time ./a.out < input.txt"
-#c for college
-alias setc="touch ip op soln.c && code soln.cpp"
-alias runc="gcc soln.c && time ./a.out < ip > op &&echo Process returned $?&& cat op"
-alias clg="gcc soln.c -Wall -Wextra -pedantic -O2 -Wshadow -Wformat=2 -Wfloat-equal -Wconversion -Wlogical-op -Wshift-overflow=2 -Wduplicated-cond -Wcast-qual -Wcast-align -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -D_FORTIFY_SOURCE=2 -fsanitize=address -fsanitize=undefined -fno-sanitize-recover -fstack-protector"
-#cpp with vim
-alias setcp="touch soln.cpp input.txt && >input.txt && cp '/mnt/d/Me/Programming/CP/templates/basic.cpp' soln.cpp && vim soln.cpp input.txt -O"
-
-PATH=$PATH:~/AppData/Local/hyper/app-2.0.0/resources/bin
-alias hyper="cmd.exe /c hyper"
-alias pathcp="cd /mnt/d/Me/Programming/CP"
-
+alias r="./a.out && rm a.out"
